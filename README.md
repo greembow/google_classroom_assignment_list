@@ -1,7 +1,4 @@
 # google_classroom_assignment_list
-Badly written by greembow in less than a day
-
----
 Hi, this is a simple program written in python to use the google classroom api to list out your assignments. Missing assignments are listed in big, scary red as well as have a prefix of `Late:` so they can be copied and pasted into something from your terminal.
 
 ## Installation:
