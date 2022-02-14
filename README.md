@@ -39,7 +39,7 @@ Hi, this is a simple program written in python to use the google classroom api t
   6. Click the `Application type` dropdown
   7. Click `Desktop app`
   8. Click `Create`
-  9. Click `Download JSON` :warning: WARNING:__ Do not share this token with anyone :warning
+  9. Click `Download JSON` :warning: WARNING:__ Do not share this token with anyone :warning:
 7. Setup
   1. Save the `JSON` file to `google_classroom_assignment_list/src/`
   2. Rename the `JSON` file to `credentials.json`
