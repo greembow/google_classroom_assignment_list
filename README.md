@@ -3,11 +3,11 @@ Hi, this is a simple program written in python to use the google classroom api t
 
 ## Instructions:
 1. Run `$ git clone https://github.com/greembow/google_classroom_assignment_list`
-2. Go to [Google's Cloud Platform](https://console.cloud.google.com/home)
-3. Create a new project
+2. Go to [Google's Cloud Console](https://console.cloud.google.com/home)
+   - **NOTE:** You will probably have to create your API credentials with a personal google account, as most school districts block creating API credentials
+4. Create a new project
    1. Click the dropdown at the top
    2. Click `New Project`
-     - **NOTE:** You will probably have to create your API credentials with a personal google account, as most school districts block creating API credentials
    3. Set the project name to anything
 4. Enable the Google Classroom API
    1. Click the dropdown at the top left
