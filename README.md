@@ -2,21 +2,21 @@
 Hi, this is a simple program written in python to use the google classroom api to list out your assignments. Missing assignments are listed in big, scary red as well as have a prefix of `Late:` so they can be copied and pasted into something from your terminal.
 
 ## Instructions:
-1. Run `$ git clone https://github.com/greembow/google_classroom_assignment_list`
-2. Go to [Google's Cloud Platform](https://console.cloud.google.com/home)
-3. Create a new project
-  1. Click the dropdown at the top
-  2. Click `New Project`
+- Run `$ git clone https://github.com/greembow/google_classroom_assignment_list`
+- Go to [Google's Cloud Platform](https://console.cloud.google.com/home)
+- Create a new project
+   1. Click the dropdown at the top
+   2. Click `New Project`
      - **NOTE:** You will probably have to create your API credentials with a personal google account, as most school districts block creating API credentials
   3. Set the project name to anything
-4. Enable the Google Classroom API
+- Enable the Google Classroom API
   1. Click the dropdown at the top left
   2. Click `APIs & Services`
   3. Click `Library`
   4. Search for `Classroom`
   5. Click `Google Classroom API`
   6. Click `Enable`
-5. Setup a OAuth Screen
+- Setup a OAuth Screen
   1. Click the dropdown at the top left
   2. Click `APIs & Services`
   3. Click `OAuth consent screen`
@@ -30,7 +30,7 @@ Hi, this is a simple program written in python to use the google classroom api t
   11. Click `Add`
   12. Click `Save and Continue`
   13. Click `Back to Dashboard`
-6. Get `credentials.json`
+- Get `credentials.json`
   1. Click the dropdown at the top left
   2. Click `APIs & Services`
   3. Click `Credentials`
@@ -40,10 +40,10 @@ Hi, this is a simple program written in python to use the google classroom api t
   7. Click `Desktop app`
   8. Click `Create`
   9. Click `Download JSON` :warning: __WARNING:__ Do not share this token with anyone :warning:
-7. Setup
+- Setup
   1. Save the `JSON` file to `google_classroom_assignment_list/src/`
   2. Rename the `JSON` file to `credentials.json`
-8. Run the program
+- Run the program
  1. Run `$ cd google_classroom_assignment_list/`
  2. Run `$ pip install -r requirements.txt`
  4. Run `$ cd src/`
@@ -52,8 +52,8 @@ Hi, this is a simple program written in python to use the google classroom api t
  5. Click `Continue`
  6. Tick both boxes that appear
  7. Click `Continue`
-9. Watch in glory as you see the hundreds of missing assignments you have appear in one terminal window
-10. A `token.json` file should be created and your assignments will start to slowly list
+- Watch in glory as you see the hundreds of missing assignments you have appear in one terminal window
+- A `token.json` file should be created and your assignments will start to slowly list
 
 ## Issues:
 - Assignments list slowly
