@@ -21,9 +21,8 @@ def main():
     if os.path.exists('./token.json'):
         try:
             creds = Credentials.from_authorized_user_file('token.json', SCOPES)
-        except ValueError as e:
-            print('Your token.json is broken! Error follows.')
-            print(e)
+        except ValueError:
+            print('decode error!!!')
             quit()
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
@@ -32,15 +31,13 @@ def main():
         else:
             try:
                 flow = InstalledAppFlow.from_client_secrets_file(
-                    './credentials.json', SCOPES)
+                    'credentials.json', SCOPES)
                 creds = flow.run_local_server(port=0)
             except ValueError as e:
-                print('Your credentials.json is broken! Error follows.')
-                print(e)
+                print('Your credentials.json is missing or broken!')
                 quit()
             except FileNotFoundError as e:
-                print('Could not find credentials.json file! Error follows.')
-                print(e)
+                print('File not found!')
                 quit()
         # Save the credentials for the next run
         try:
@@ -48,8 +45,10 @@ def main():
                 token.write(creds.to_json())
         except FileNotFoundError as e:
             print('File not found!')
+            quit()
         except AttributeError as e:
             print('Attribute error!')
+            quit()
 
     try:
         service = build('classroom', 'v1', credentials=creds)
@@ -74,8 +73,8 @@ def main():
                         except: # when it fails because the assignment is not late
                             print('    '+assignment['title']) # print assignment name
             
-    except HttpError as e: # oops
-        print('An error occurred: %s' % e)
+    except HttpError as error: # oops
+        print('An error occurred: %s' % error)
 
 if __name__ == '__main__':
     main()
