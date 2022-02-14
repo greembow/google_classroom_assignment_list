@@ -7,7 +7,8 @@ Hi, this is a simple program written in python to use the google classroom api t
 ## Installation:
 - Clone the repo
 - Follow the [Google Classroom API's Quickstart Guide](https://developers.google.com/classroom/quickstart/python#prerequisites) to install the required dependencies and create credentials for the API
-  - **NOTE** You will probably have to create your API credentials with a personal google account, as most school districts block creating API credentials
+  - **NOTE:** You will probably have to create your API credentials with a personal google account, as most school districts block creating API credentials
+  - **NOTE:** You have to make your credentials for a Desktop App
 - Place your `credentials.json` file in the root directory of the repo
 - Run the program and authenticate with Google
 - A `token.json` file should be created and your assignments will start to slowly list
