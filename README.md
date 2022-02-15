@@ -41,13 +41,12 @@ Hi, this is a simple program written in python to use the google classroom api t
    8. Click `Create`
    9. Click `Download JSON` :warning: __WARNING:__ Do not share this token with anyone :warning:
 7. Setup
-   1. Save the `JSON` file to `google_classroom_assignment_list/src/`
+   1. Save the `JSON` file to `google_classroom_assignment_list/`
    2. Rename the `JSON` file to `credentials.json`
 8. Run the program
    1. Run `$ cd google_classroom_assignment_list/`
    2. Run `$ pip install -r requirements.txt`
-   4. Run `$ cd src/`
-   3. Run `$ python main.py`
+   3. Run `$ python src/main.py`
    4. Click the Google account you added as a tester previously
    5. Click `Continue`
    6. Tick both boxes that appear
@@ -61,3 +60,6 @@ Hi, this is a simple program written in python to use the google classroom api t
 - Archived classes show up in the list (this is a limitation of the API)
 
 My response: I am a rust developer and made this in a very short period of time. Commits are welcome if you want to add new features/clean up my code!
+
+## Other:
+Thanks to [HenriHawk42](https://github.com/HenriHawk42) and [Frigyes06](https://github.com/Frigyes06) for testing this and providing feedback!
