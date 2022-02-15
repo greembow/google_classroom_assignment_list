@@ -52,8 +52,8 @@ Hi, this is a simple program written in python to use the google classroom api t
    5. Click `Continue`
    6. Tick both boxes that appear
    7. Click `Continue`
-9. Watch in glory as you see the hundreds of missing assignments you have appear in one terminal window
-10. A `token.json` file should be created and your assignments will start to slowly list
+9. A `token.json` file should be created and your assignments will start to slowly list
+10. Watch in glory as you see the hundreds of missing assignments you have appear in one terminal window
 
 ## Issues:
 - Assignments list slowly
