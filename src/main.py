@@ -72,11 +72,18 @@ def main():
                 student_submissions = service.courses().courseWork().studentSubmissions().list(courseId=course.get('id'), courseWorkId=assignment['id']).execute() # get a list of student submissions, so we can check for if it is late/turned in
                 for submission in student_submissions['studentSubmissions']: # for each submission (should only be one but this safeguards it)
                     if submission['state'] == 'CREATED': # if the state is CREATED it means not turned in
-                        try: # classroom's api does not include the late parameter unless it is true, so abuse a try statement here
-                            if submission['late']: # if the assignment is late
-                                print(Fore.RED+'    Late: '+assignment['title']+Style.RESET_ALL) # print the assignment title in a scary colour
-                        except: # when it fails because the assignment is not late
-                            print('    '+assignment['title']) # print assignment name
+                        try:
+                            due_date=assignment['dueDate']
+                            if not due_date['year'] == 2022:
+                                continue
+                        except:
+                            print(Fore.GREEN+'    No Due Date: '+assignment['title']+Style.RESET_ALL)
+                        else:
+                            try: # classroom's api does not include the late parameter unless it is true, so abuse a try statement here
+                                if submission['late']: # if the assignment is late
+                                    print(Fore.RED+'    Late: '+assignment['title']+Style.RESET_ALL) # print the assignment title in a scary colour
+                            except: # when it fails because the assignment is not late
+                                print('    '+assignment['title']) # print assignment name
             
     except HttpError as e: # oops
         print('An error occurred: %s' % e)
